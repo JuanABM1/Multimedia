@@ -1,19 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <FrameLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@drawable/rounded_border"
+        >
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_shopping_cart"
+            android:scaleType="fitCenter"
+            tools:ignore="MissingConstraints"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center|left"
+            >
+        </ImageButton>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <EditText
+            android:layout_width="400dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            >
+        </EditText>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_spanish_flag"
+            android:scaleType="centerInside"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="220dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="9dp"
+            >
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_england_flag"
+            android:scaleType="centerInside"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="120dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            >
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_catalonia_flag"
+            android:scaleType="fitCenter"
+            tools:ignore="MissingConstraints"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="20dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            >
+        </ImageButton>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/rounded_border"
+        >
+
+        <ListView
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+        />
+
+        <GridView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+        />
+    </LinearLayout>
+</LinearLayout>
