@@ -16,6 +16,7 @@
         android:background="@drawable/rounded_border"
         >
         <ImageButton
+            android:id="@+id/shopping_car_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/ic_shopping_cart"
@@ -28,6 +29,7 @@
         </ImageButton>
 
         <EditText
+            android:id="@+id/search_bar_text"
             android:layout_width="400dp"
             android:layout_height="80dp"
             android:layout_gravity="center|top"
@@ -37,6 +39,7 @@
         </EditText>
 
         <ImageButton
+            android:id="@+id/spain_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/ic_spanish_flag"
@@ -50,27 +53,29 @@
         </ImageButton>
 
         <ImageButton
+            android:id="@+id/catalonia_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_england_flag"
+            android:src="@drawable/ic_catalonia_flag"
             android:scaleType="centerInside"
             tools:ignore="MissingConstraints"
             android:layout_gravity="center|right"
             android:layout_marginRight="120dp"
+            android:padding="8dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             >
         </ImageButton>
 
         <ImageButton
+            android:id="@+id/england_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_catalonia_flag"
+            android:src="@drawable/ic_england_flag"
             android:scaleType="fitCenter"
             tools:ignore="MissingConstraints"
             android:layout_gravity="center|right"
             android:layout_marginRight="20dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             >
         </ImageButton>
 
@@ -84,11 +89,13 @@
         >
 
         <ListView
+            android:id="@+id/categories_list"
             android:layout_width="200dp"
             android:layout_height="match_parent"
         />
 
         <GridView
+            android:id="@+id/products_gridview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="right"
