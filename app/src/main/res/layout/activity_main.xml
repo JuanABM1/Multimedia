@@ -14,8 +14,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_border"
+        android:layout_marginBottom="1dp"
         >
         <ImageButton
+            android:id="@+id/shopping_car_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/ic_shopping_cart"
@@ -28,15 +30,30 @@
         </ImageButton>
 
         <EditText
+            android:id="@+id/search_bar_text"
             android:layout_width="400dp"
             android:layout_height="80dp"
             android:layout_gravity="center|top"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
             >
         </EditText>
 
         <ImageButton
+            android:id="@+id/search"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/search"
+            android:layout_gravity="center"
+            android:layout_marginRight="150dp"
+            android:background="@android:color/transparent"
+            />
+
+        <ImageButton
+            android:id="@+id/spain_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/ic_spanish_flag"
@@ -50,27 +67,29 @@
         </ImageButton>
 
         <ImageButton
+            android:id="@+id/catalonia_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_england_flag"
+            android:src="@drawable/ic_catalonia_flag"
             android:scaleType="centerInside"
             tools:ignore="MissingConstraints"
             android:layout_gravity="center|right"
             android:layout_marginRight="120dp"
+            android:padding="8dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
             >
         </ImageButton>
 
         <ImageButton
+            android:id="@+id/england_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/ic_catalonia_flag"
+            android:src="@drawable/ic_england_flag"
             android:scaleType="fitCenter"
             tools:ignore="MissingConstraints"
             android:layout_gravity="center|right"
             android:layout_marginRight="20dp"
             android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
             >
         </ImageButton>
 
@@ -78,21 +97,26 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:background="@drawable/rounded_border"
         >
 
         <ListView
+            android:id="@+id/categories_list"
             android:layout_width="200dp"
             android:layout_height="match_parent"
+            android:background="@drawable/rounded_border"
         />
 
         <GridView
+            android:id="@+id/products_gridview"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="right"
-            android:layout_weight="1"
+            android:layout_weight="0.9"
+            android:numColumns="3"
+            android:background="@drawable/rounded_background"
         />
     </LinearLayout>
 </LinearLayout>
