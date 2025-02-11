@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".FoodActivity">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    >
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="50dp"
+        android:src="@drawable/arrow_left"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        >
+
+    </ImageButton>
+
+    <ImageButton
+        android:id="@+id/cart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center|right"
+        android:layout_marginRight="50dp"
+        android:src="@drawable/ic_shopping_cart"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        >
+
+    </ImageButton>
+
+</FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="100dp"
+            android:layout_marginLeft="200dp"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/productname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola"
+            android:textSize="40sp"
+            android:layout_gravity="center|right"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="300dp"
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/description_text"
+            android:layout_width="1000dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="140dp"
+            android:text="Hola"
+            android:textSize="25sp"
+            android:background="@drawable/rounded_textview"
+            android:gravity="center"
+            >
+        </TextView>
+
+        <Button
+            android:id="@+id/add_button"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="Añadir"
+            android:textSize="35sp"
+            >
+        </Button>
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="400dp"
+            android:src="@drawable/alergenos"
+            />
+    </FrameLayout>
+
+</LinearLayout>
