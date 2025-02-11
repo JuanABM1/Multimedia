@@ -36,8 +36,21 @@
             android:layout_gravity="center|top"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_edittext"
             >
         </EditText>
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/search"
+            android:layout_gravity="center"
+            android:layout_marginRight="150dp"
+            android:background="@android:color/transparent"
+            />
 
         <ImageButton
             android:id="@+id/spain_button"
@@ -84,7 +97,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal"
         android:background="@drawable/rounded_border"
         >
