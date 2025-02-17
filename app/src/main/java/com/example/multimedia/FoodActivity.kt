@@ -1,6 +1,7 @@
 package com.example.multimedia
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -31,6 +32,12 @@ class FoodActivity : AppCompatActivity() {
         imageView.setImageResource(productImage)
 
         addButton.setOnClickListener {
+            val addSound = MediaPlayer.create(this, R.raw.yoo)
+            addSound.start()
+
+            // Libera memoria al terminar
+            addSound.setOnCompletionListener { it.release() }
+
             productName?.let {
                 val product = CartItem(it, productImage)
                 CartManager.addItem(product)
@@ -41,11 +48,13 @@ class FoodActivity : AppCompatActivity() {
         cart.setOnClickListener{
             val intent = Intent(this, CartActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         back.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+
         }
     }
 }

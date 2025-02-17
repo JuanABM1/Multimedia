@@ -28,8 +28,8 @@ class CartActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
         back.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+            finish()
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
         order.setOnClickListener {
@@ -40,4 +40,5 @@ class CartActivity : AppCompatActivity() {
             Toast.makeText(this, "Pedido hecho", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

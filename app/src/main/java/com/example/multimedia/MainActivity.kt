@@ -2,6 +2,7 @@ package com.example.multimedia
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.KeyEvent
 import android.widget.ArrayAdapter
@@ -16,11 +17,18 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var mediaPlayer: MediaPlayer
+
     @SuppressLint("ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.music)
+        mediaPlayer.isLooping = true
+        mediaPlayer.start()
 
         val listView: ListView = findViewById(R.id.categories_list)
         val items = listOf("Total", "Alcohol", "Entrantes", "Sushi", "Refrescos")
@@ -135,12 +143,20 @@ class MainActivity : AppCompatActivity() {
                     putExtra("productImage", it.imageResId)
                 }
                 startActivity(intent)
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             }
         }
 
         imagebutton.setOnClickListener{
             val intent = Intent(this, CartActivity::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        if (::mediaPlayer.isInitialized) {
+            mediaPlayer.release()
         }
     }
 }
